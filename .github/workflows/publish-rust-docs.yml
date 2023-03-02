@@ -34,7 +34,7 @@ jobs:
         uses: actions-rs/cargo@v1.0.1
         with:
           command: doc
-          args: --release --all-features --no-deps
+          args: --release --no-deps
 
       - id: repo-basename
         run: echo "value=`basename ${{ github.repository }} | sed \"s/-/_/g\"`" >> $GITHUB_OUTPUT
